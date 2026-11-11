@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Росток — наборы для выращивания микрозелени дома</title>
+<meta name="description" content="Росток: наборы для выращивания микрозелени и подписка на свежие семена. Урожай через 7 дней, без опыта и без земли.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header" id="header">
+  <a href="#top" class="logo"><img src="images/favicon.svg" alt="" width="34" height="34">Росток</a>
+  <nav class="nav" id="nav" aria-label="Главное меню">
+    <a href="#why">Преимущества</a><a href="#catalog">Каталог</a><a href="#popular">Хиты</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину">Корзина <span id="cartCount">0</span></button>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <h1>Свежий урожай на вашем подоконнике за 7 дней</h1>
+    <p>Готовые наборы для микрозелени: семена, лотки и инструкция. Без земли, без опыта, без запаха. Просто поливайте и срезайте.</p>
+    <div class="hero-actions"><a href="#catalog" class="btn btn-primary">Выбрать набор</a><a href="#why" class="btn btn-ghost">Как это работает</a></div>
+    <ul class="stats"><li><b>7 дней</b>до первого урожая</li><li><b>12 000+</b>семей уже растят</li><li><b>4,9</b>средняя оценка</li></ul>
+  </div>
+  <div class="hero-art"><img src="images/hero.svg" alt="Побеги микрозелени в лотке" width="400" height="460"></div>
+</section>
+
+<section class="section" id="why">
+  <h2>Почему растить с Ростком</h2>
+  <div class="grid grid-4">
+    <article class="card reveal"><div class="ico">🌱</div><h3>Всходы за 3 дня</h3><p>Семена проверены на всхожесть: не меньше 95% в каждой партии.</p></article>
+    <article class="card reveal"><div class="ico">💧</div><h3>Без земли</h3><p>Био-коврик держит влагу сам. Поливать нужно раз в день, около минуты.</p></article>
+    <article class="card reveal"><div class="ico">🥗</div><h3>Больше пользы</h3><p>В микрозелени витаминов в несколько раз больше, чем во взрослых растениях.</p></article>
+    <article class="card reveal"><div class="ico">📦</div><h3>Доставка за 2 дня</h3><p>Бесплатно от 3 000 сом. Если набор не взошёл, вернём деньги.</p></article>
+  </div>
+</section>
+
+<section class="section alt" id="catalog">
+  <h2>Каталог наборов</h2>
+  <div class="tools">
+    <input type="search" id="search" placeholder="Найти: редис, базилик, подсолнух…" aria-label="Поиск по каталогу">
+    <select id="sort" aria-label="Сортировка"><option value="def">По умолчанию</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option><option value="rating">По рейтингу</option></select>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="grid grid-3" id="products"></div>
+  <p class="empty" id="empty" hidden>Ничего не найдено. Измените запрос или выберите другую категорию.</p>
+</section>
+
+<section class="section" id="popular">
+  <h2>Хиты этого месяца</h2>
+  <div class="grid grid-3" id="popularGrid"></div>
+</section>
+
+<section class="section promo">
+  <div><h2>Подписка «Каждую неделю»</h2><p>Новый набор приходит раз в неделю, чтобы зелень на столе не заканчивалась. Скидка 15%, пауза и отмена в любой момент.</p></div>
+  <button class="btn btn-primary" id="subBtn">Оформить подписку</button>
+</section>
+
+<section class="section" id="reviews">
+  <h2>Что говорят покупатели</h2>
+  <div class="grid grid-3">
+    <blockquote class="card review reveal"><p>Купила набор для детей. Через неделю они сами резали редис в салат и гордились. Теперь заказываем каждый месяц.</p><footer><b>Айгерим К.</b> Бишкек</footer></blockquote>
+    <blockquote class="card review reveal"><p>Я повар, брал для кухни ресторана. Подсолнух и горох ровные, сочные, держатся в холодильнике несколько дней.</p><footer><b>Марат С.</b> Ош</footer></blockquote>
+    <blockquote class="card review reveal"><p>У меня никогда ничего не росло. Здесь получилось с первого раза, инструкция понятная, всё уже в комплекте.</p><footer><b>Елена В.</b> Каракол</footer></blockquote>
+  </div>
+</section>
+
+<section class="section alt faq" id="faq">
+  <h2>Частые вопросы</h2>
+  <details><summary>Нужен ли солнечный подоконник?</summary><p>Достаточно обычного дневного света. Микрозелень хорошо растёт и на светлой кухне без прямого солнца.</p></details>
+  <details><summary>Как быстро будет урожай?</summary><p>Редис, горох и подсолнух готовы за 7–10 дней, базилик и кинза за 12–14 дней.</p></details>
+  <details><summary>Можно ли вырастить набор повторно?</summary><p>Лоток можно использовать повторно. Отдельные семена и био-коврики продаются в каталоге.</p></details>
+  <details><summary>Что если семена не взойдут?</summary><p>Напишите нам в течение 14 дней: заменим набор или вернём деньги, без лишних вопросов.</p></details>
+</section>
+
+<section class="section contacts" id="contacts">
+  <div>
+    <h2>Свяжитесь с нами</h2>
+    <p>Подскажем, какой набор выбрать, и поможем с заказом.</p>
+    <ul class="clist"><li>📍 Бишкек, ул. Токтогула, 120</li><li>📞 <a href="tel:+996555123456">+996 555 123 456</a></li><li>✉️ <a href="mailto:hello@rostok.example">hello@rostok.example</a></li><li>🕘 Ежедневно, 9:00–20:00</li></ul>
+  </div>
+  <form class="form" id="contactForm" novalidate>
+    <label>Имя<input name="name" type="text" autocomplete="name" required><small class="err"></small></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required><small class="err"></small></label>
+    <label>Сообщение<textarea name="msg" rows="4" required></textarea><small class="err"></small></label>
+    <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+  </form>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div><a href="#top" class="logo light"><img src="images/favicon.svg" alt="" width="34" height="34">Росток</a><p>Домашние мини-огороды для тех, кто любит свежее.</p></div>
+    <div><h4>Разделы</h4><a href="#catalog">Каталог</a><a href="#popular">Хиты</a><a href="#faq">Вопросы</a></div>
+    <div><h4>Мы в сети</h4><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://t.me" target="_blank" rel="noopener">Telegram</a><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+  <p class="copy">© <span id="year"></span> Росток. Все права защищены.</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Корзина" aria-hidden="true">
+  <div class="drawer-head"><h3>Ваша корзина</h3><button id="closeCart" aria-label="Закрыть корзину">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <form class="drawer-foot" id="orderForm" novalidate>
+    <div class="total">Итого: <b id="cartTotal">0 сом</b></div>
+    <label>Имя<input name="name" type="text" required><small class="err"></small></label>
+    <label>Телефон<input name="phone" type="tel" placeholder="+996 555 123 456" required><small class="err"></small></label>
+    <button class="btn btn-primary" type="submit">Оформить заказ</button>
+  </form>
+</aside>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
